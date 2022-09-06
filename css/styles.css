@@ -14,6 +14,7 @@
     --modal-btn-color: #188CE8;
     --portfolio-border-color: #EEEEEE;
     --header-border-color: #ECECEC;
+    --icon-grey-color: #AFB1B8;
 }
 
 body {
@@ -72,6 +73,33 @@ img {
     line-height: 1.17;
     text-align: center;
     margin-bottom: 50px;
+}
+
+.social-list {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
+    padding-left: 32px;
+}
+
+.social-list-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+}
+
+.social-list-link {
+    fill: var(--icon-grey-color);
+}
+
+.social-list-link:hover,
+.social-list-link:focus {
+    fill: var(--white-font-color);
+    background-color: var(--accent-color);
 }
 
 /* =====Компоненти-кінець */
@@ -151,6 +179,12 @@ img {
     display: flex;
 }
 
+.link-mail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .link-mail,
 .link-tel {
     font-weight: 500;
@@ -164,17 +198,51 @@ img {
     color: var(--accent-color);
 }
 
+.link-mail .contact-icon-mail {
+    fill: currentColor;
+}
+
+.contact-icon-mail {
+    margin-right: 10px;
+}
+
+.link-tel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .link-tel:hover,
 .link-tel:focus {
     color: var(--accent-color);
 }
 
+.link-tel .contact-icon-tel {
+    fill: currentColor;
+}
+
+.contact-icon-tel {
+    margin-right: 10px;
+}
 /* =====Хедер-кінець===== */
 
 /* =====Мейн контент-початок===== */
 
 /* Герой */
+
+
+
 .hero {
+    background-image: 
+    linear-gradient(
+    rgba(47, 48, 58, 0.4), 
+    rgba(47, 48, 58, 0.4)),
+    url(../images/Img-sq.jpg);
+    
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
     padding-top: 200px;
     padding-bottom: 200px;
 
@@ -231,6 +299,17 @@ img {
     clip: rect(0 0 0 0);
 } 
 
+.advantages-icon-wrapper {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    background-color: var(--background-secondary-grey-color);
+}
+
 .advantages-list {
     display: flex;
 }
@@ -265,7 +344,7 @@ img {
 /* Наша команда */
 .team-list {
     display: flex;
-    flex-wrap: wrap;
+
 }
 
 .team-list-item:not(:nth-child(4n)) {
@@ -277,8 +356,12 @@ img {
 }
 
 .team-list-wrapper {
+    padding-bottom: 30px;
     text-align: center;
+    width: 270px;
 
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
     background-color: var(--white-font-color);
 }
 
@@ -291,7 +374,7 @@ img {
 }
 
 .team-position {  
-    padding-bottom: 30px;
+    margin-bottom: 16px;
 
     font-weight: 400;
     font-size: 16px;
@@ -301,6 +384,35 @@ img {
 
 .team {
     background-color: var(--background-secondary-grey-color);
+}
+
+/* Постійні клієнти */
+.clients-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-list .clients-list-item {
+    border: 1px solid var(--icon-grey-color);
+    border-radius: 4px;
+}
+
+
+.clients-list-icon {
+    padding: 16px 32px;
+}
+
+.clients-list-link {
+    fill: var(--icon-grey-color);
+}
+
+.clients-list-link:hover,
+.clients-list-link:focus {
+    fill: var(--accent-color);
 }
 
 /* Фільтр-портфоліо */
@@ -339,6 +451,7 @@ img {
 .portfolio-btn:focus {
     color: var(--white-font-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* Портфоліо */
@@ -437,6 +550,35 @@ img {
     color: var(--accent-color);
 }
 
+.footer-social-text {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    color: var(--white-font-color);
+}
+
+.footer-container {
+    display: flex;
+}
+
+.footer-contacts:not(:last-child) {
+    margin-right: 70px;
+}
+
+.footer-social-list {
+    display: flex;
+}
+
+.footer-social-list-item:not(:nth-child(4n)) {
+    margin-right: 10px;
+}
+
+.footer-social-list-link {
+    fill: var(--white-font-color);
+    background-color: rgba(255, 255, 255, 0.1);
+}
 /* =====Футер-кінець===== */
 
 
