@@ -77,9 +77,8 @@ img {
 
 .social-list {
     display: flex;
-    justify-content: space-between;
-    padding-right: 32px;
-    padding-left: 32px;
+    justify-content: center;
+    gap: 10px;
 }
 
 .social-list-link {
@@ -230,8 +229,6 @@ img {
 
 /* Герой */
 
-
-
 .hero {
     background-image: 
     linear-gradient(
@@ -347,21 +344,20 @@ img {
 
 }
 
+.team-list-item {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+}
+
 .team-list-item:not(:nth-child(4n)) {
     margin-right: 30px;
 }
 
-.team-list-pic {
-    margin-bottom: 30px;
-}
-
 .team-list-wrapper {
+    padding-top: 30px;
     padding-bottom: 30px;
     text-align: center;
     width: 270px;
-
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
     background-color: var(--white-font-color);
 }
 
@@ -388,29 +384,32 @@ img {
 /* Постійні клієнти */
 .clients-list {
     display: flex;
-    justify-content: space-between;
 }
 
 .clients-list-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.clients-list .clients-list-item {
+.clients-list-item {
+    width: 170px;
+    height: 92px;
     border: 1px solid var(--icon-grey-color);
     border-radius: 4px;
 }
 
-.clients-list-icon {
-    padding: 16px 32px;
-}
-
 .clients-list-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
     fill: var(--icon-grey-color);
 }
 
 .clients-list-link:hover,
 .clients-list-link:focus {
     fill: var(--accent-color);
+    border: 1px solid var(--accent-color);
 }
 
 /* Фільтр-портфоліо */
@@ -467,8 +466,12 @@ img {
     flex-basis: calc((100% - 90px) / 3);
 }
 
+.portfolio-list-link {
+    display: block;
+}
+
 .portfolio-list-link:hover,
-.portfolio-list-item:hover{
+.portfolio-list-link:hover{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -485,6 +488,7 @@ img {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    color: var(--main-text-color);
 }
 
 .portfolio-list-text {
@@ -554,6 +558,7 @@ img {
 }
 
 .footer-social-text {
+    font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
@@ -564,6 +569,7 @@ img {
 
 .footer-container {
     display: flex;
+    align-items: baseline;
 }
 
 .footer-contacts:not(:last-child) {
